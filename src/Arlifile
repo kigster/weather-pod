@@ -1,0 +1,23 @@
+# vi:syntax=yaml
+version: 2.0.0
+libraries_path: "./libraries"
+lock_format: cmake
+device:
+  board: uno
+  cpu: atmega328p
+  libraries:
+    hardware: 
+      - name: Wire
+dependencies:
+  - name: Time
+  - name: "DHT sensor library"
+  - name: "Adafruit Unified Sensor"
+  - name: "Adafruit BMP085 Unified"
+  - name: "DS1307RTC"
+  - name: "LiquidCrystal I2C"
+  - name: "SimpleTimer"
+    url: https://github.com/jfturcot/SimpleTimer.git
+  - name: "EEPROMEx"
+
+
+  

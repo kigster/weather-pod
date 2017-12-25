@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set +e
+source bin/lib/loader
+set -e
+
+export root=$(pwd)
+export sources=${1}
+
+[[ -z ${sources} || ! -d ${sources} ]] && {
+  echo "usage: $0 <source-folder>"
+  echo "   eg: $0 src"
+  echo "   eg: $0 example"
+  exit 1
+}
+
+function install::libs() {
+  cd ${sources}
+  [[ -f Arlifile ]] && arli bundle
+  cd ${root}
+}
+
+function build::cmake(){
+  cd $sources
+  rm -rf build
+  mkdir -p build
+  cd build
+  cmake ..
+  make
+  cd ${root}
+}
+
+function build() {
+  install::libs
+  build::cmake
+}
+
+build ${sources}
+
+set +e

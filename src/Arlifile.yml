@@ -1,0 +1,157 @@
+# vi:syntax=yaml
+---
+Time:
+  :name: Time
+  :version: 1.5.0
+  :author: Michael Margolis
+  :maintainer: Paul Stoffregen
+  :sentence: Timekeeping functionality for Arduino
+  :paragraph: Date and Time functions, with provisions to synchronize to external
+    time sources like GPS and NTP (Internet).  This library is often used together
+    with TimeAlarms and DS1307RTC.
+  :website: http://playground.arduino.cc/code/time
+  :category: Timing
+  :architectures:
+  - "*"
+  :types:
+  - Contributed
+  :url: http://downloads.arduino.cc/libraries/github.com/PaulStoffregen/Time-1.5.0.zip
+  :archiveFileName: Time-1.5.0.zip
+  :size: 25779
+  :checksum: SHA-256:836ad80dcb8b4f6d015c3e2b227d3047235d08f19ca85b12b79f08de67c5fbe8
+  :dot_a_linkage: 
+  :includes: 
+DHT:
+  :name: DHT sensor library
+  :version: 1.3.0
+  :author: Adafruit
+  :maintainer: Adafruit <info@adafruit.com>
+  :sentence: Arduino library for DHT11, DHT22, etc Temp & Humidity Sensors
+  :paragraph: Arduino library for DHT11, DHT22, etc Temp & Humidity Sensors
+  :website: https://github.com/adafruit/DHT-sensor-library
+  :category: Sensors
+  :architectures:
+  - "*"
+  :types:
+  - Recommended
+  :url: http://downloads.arduino.cc/libraries/github.com/adafruit/DHT_sensor_library-1.3.0.zip
+  :archiveFileName: DHT_sensor_library-1.3.0.zip
+  :size: 10949
+  :checksum: SHA-256:3eb7536c4a8a38c9e828ad77faa9a9d156f40b037321b14e8e54945ec593bbfb
+  :dot_a_linkage: 
+  :includes: 
+Adafruit_Sensor:
+  :name: Adafruit Unified Sensor
+  :version: 1.0.2
+  :author: Adafruit <info@adafruit.com>
+  :maintainer: Adafruit <info@adafruit.com>
+  :sentence: Required for all Adafruit Unified Sensor based libraries.
+  :paragraph: A unified sensor abstraction layer used by many Adafruit sensor libraries.
+  :website: https://github.com/adafruit/Adafruit_Sensor
+  :category: Sensors
+  :architectures:
+  - "*"
+  :types:
+  - Recommended
+  :url: http://downloads.arduino.cc/libraries/github.com/adafruit/Adafruit_Unified_Sensor-1.0.2.zip
+  :archiveFileName: Adafruit_Unified_Sensor-1.0.2.zip
+  :size: 6711
+  :checksum: SHA-256:7aed049fe0de5dd3529ce1f01ed27ede6d93bfaba2d2ca02cc6c52080d831441
+  :dot_a_linkage: 
+  :includes: 
+Adafruit_BMP085_U:
+  :name: Adafruit BMP085 Unified
+  :version: 1.0.0
+  :author: Adafruit
+  :maintainer: Adafruit <info@adafruit.com>
+  :sentence: Unified sensor driver for Adafruit's BMP085 & BMP180 breakouts
+  :paragraph: Unified sensor driver for Adafruit's BMP085 & BMP180 breakouts
+  :website: https://github.com/adafruit/Adafruit_BMP085_Unified
+  :category: Sensors
+  :architectures:
+  - "*"
+  :types:
+  - Recommended
+  :url: http://downloads.arduino.cc/libraries/github.com/adafruit/Adafruit_BMP085_Unified-1.0.0.zip
+  :archiveFileName: Adafruit_BMP085_Unified-1.0.0.zip
+  :size: 8653
+  :checksum: SHA-256:1929d0fd34683e5afb935090fb7fd3a81dbddfde8bf50a5d3f1d393784e78e0a
+  :dot_a_linkage: 
+  :includes: 
+DS1307RTC:
+  :name: DS1307RTC
+  :version: 1.4.0
+  :author: Michael Margolis
+  :maintainer: Paul Stoffregen
+  :sentence: Use a DS1307 Real Time Clock chip with the Time library
+  :paragraph: 
+  :website: http://playground.arduino.cc/code/time
+  :category: Timing
+  :architectures:
+  - "*"
+  :types:
+  - Contributed
+  :url: http://downloads.arduino.cc/libraries/github.com/PaulStoffregen/DS1307RTC-1.4.0.zip
+  :archiveFileName: DS1307RTC-1.4.0.zip
+  :size: 4701
+  :checksum: SHA-256:13f90bbea63dfe3dc20b0720d0ef840e75a40adffda0e093b92eb3cb7a6a7f94
+  :dot_a_linkage: 
+  :includes: 
+LiquidCrystal_I2C:
+  :name: LiquidCrystal I2C
+  :version: 1.1.2
+  :author: Frank de Brabander
+  :maintainer: Marco Schwartz <marcolivier.schwartz@gmail.com>
+  :sentence: A library for I2C LCD displays.
+  :paragraph: The library allows to control I2C displays with functions extremely
+    similar to LiquidCrystal library. THIS LIBRARY MIGHT NOT BE COMPATIBLE WITH EXISTING
+    SKETCHES.
+  :website: https://github.com/marcoschwartz/LiquidCrystal_I2C
+  :category: Display
+  :architectures:
+  - avr
+  :types:
+  - Contributed
+  :url: http://downloads.arduino.cc/libraries/github.com/marcoschwartz/LiquidCrystal_I2C-1.1.2.zip
+  :archiveFileName: LiquidCrystal_I2C-1.1.2.zip
+  :size: 19843
+  :checksum: SHA-256:792a649e47118ce547fd4343d0889a4271f76d7bed0738f7a9ebbec4d24d6753
+  :dot_a_linkage: 
+  :includes: 
+SimpleTimer:
+  :name: SimpleTimer
+  :version: 
+  :author: 
+  :maintainer: 
+  :sentence: 
+  :paragraph: 
+  :website: 
+  :category: 
+  :architectures: 
+  :types: 
+  :url: https://github.com/jfturcot/SimpleTimer.git
+  :archiveFileName: 
+  :size: 
+  :checksum: 
+  :dot_a_linkage: 
+  :includes: 
+EEPROMex:
+  :name: EEPROMEx
+  :version: 1.0.0
+  :author: Thijs Elenbaas
+  :maintainer: Thijs Elenbaas
+  :sentence: Extension of the standard Arduino EEPROM library.
+  :paragraph: Extended for reading and writing basic types, structs, strings, arrays
+    and more.
+  :website: http://playground.arduino.cc/Code/EEPROMex
+  :category: Data Storage
+  :architectures:
+  - "*"
+  :types:
+  - Contributed
+  :url: http://downloads.arduino.cc/libraries/github.com/thijse/EEPROMEx-1.0.0.zip
+  :archiveFileName: EEPROMEx-1.0.0.zip
+  :size: 87008
+  :checksum: SHA-256:4215cd5e6dc68b550b17e7e5f92baba44919881197a9a1153edec9f5bdde1cca
+  :dot_a_linkage: 
+  :includes: 
