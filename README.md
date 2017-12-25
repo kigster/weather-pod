@@ -1,8 +1,13 @@
 
 # WeatherPod
 
-Please refer to the README for the template project, available here:
-[arli-cmake](https://github.com/kigster/arli-cmake).
+**Full Project inside an Enclosure:**
+
+![screen](doc/weather-pod.jpg)
+
+**Just the Screen**
+
+![screen](doc/lcd-screen.jpg) 
 
 ## Usage
 
@@ -18,29 +23,31 @@ The directory structure should look as follows:
   WeatherPod
      |
      |__ bin/
-     |   |___ setup
-     |   |___ build
+     |   |___ setup                           <———— provided by the arli-cmake
+     |   |___ build                           <———— provided by the arli-cmake
      |
      |__ cmake/
-     |   |___ Arli.cmake
-     |   |___ ArduinoToolchain.cmake          <———— provided by arduino-cmake project
-     |   |___ Platform/                       <———— provided by arduino-cmake project
+     |   |___ Arli.cmake                      <———— provided by the arli-cmake 
+     |   |___ ArduinoToolchain.cmake          <———— provided by arduino-cmake 
+     |   |___ Platform/                       <———— provided by arduino-cmake
      |
      |__ src/
-     |   |___ Arlifile
-     |   |___ CMakeLists.txt
-     |   |___ WeatherPod.cpp
-     |
-     |__ example/
-         |___ Arlifile
-         |___ CMakeLists.txt
-         |___ Adafruit7SDisplay.cpp
+         |___ Arlifile                        <———— provided by the arli-cmake
+         |___ CMakeLists.txt                  <———— provided by the arli-cmake
+         |___ WeatherPod.cpp
+         |___ SetTime.h
+
 ```
 
-You might need to run `bin/setup` first to ensure you have all the dependencies. 
+## Installation
 
-Once you do that, you can build any of the source folders (i.e. either `src` or `example`) by
-running `bin/build src` or `bin/build example`.
+Run the following commands to perform setup and an automatic build:
+
+```bash
+$ cd WeatherPod
+$ bin/setup
+$ bin/build src
+```
 
 ### Building Manually
 
@@ -53,4 +60,27 @@ cmake ..
 make 
 make upload
 ```
+
+You can also connect to a serial device like so:
+
+```
+make WeatherPod-serial
+```
+
+## How Was This Project Created?
+
+It was created using Arli — Arduino project generator and a library manager, that relies on CMake and the arduino-cmake project. 
+
+### Acknowledgements
+
+The following projects made this project so easy:
+
+ * [`arli`](https://github.com/kigster/arli) is the command line Ruby gem that provides most of the functionality here; and
+
+ * [`arduino-library`](https://github.com/kigster/arduino-library) is a Ruby gem that handles searching and downloading JSON database
+
+ * [`arli-cmake`](https://github.com/kigster/arli-cmake) — a project that bridges `arduino-cmake` and `arli`, by providing some additional CMake helpers, and integration with `Arlifile.cmake`.
+
+ * [`arduino-cmake`](https://github.com/arduino-cmake/arduino-cmake) — this is the primary CMake build infrastructure that Arli uses to make light-weight and flexible Arduino projects that build out of the box.
+
 
