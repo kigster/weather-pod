@@ -1,7 +1,7 @@
 cache:
   directories:
-   - /home/travis/arduino-sdk-downloads
-   - /home/travis/arduino-sdk
+   - ${HOME}/arduino-sdk-downloads
+   - ${HOME}/home/travis/arduino-sdk
 language: c
 os:
   - linux

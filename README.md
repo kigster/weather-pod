@@ -1,13 +1,10 @@
+[![Build Status](https://travis-ci.org/kigster/weather-pod.svg?branch=master)](https://travis-ci.org/kigster/weather-pod)
 
 # WeatherPod
 
 **Full Project inside an Enclosure:**
 
 ![screen](doc/weather-pod.jpg)
-
-**Just the Screen**
-
-![screen](doc/lcd-screen.jpg) 
 
 ## Usage
 
@@ -16,29 +13,6 @@ Let's cd into the project folder:
 ```bash
 cd WeatherPod
 ```
-
-The directory structure should look as follows:
-
-```
-  WeatherPod
-     |
-     |__ bin/
-     |   |___ setup                           <———— provided by the arli-cmake
-     |   |___ build                           <———— provided by the arli-cmake
-     |
-     |__ cmake/
-     |   |___ Arli.cmake                      <———— provided by the arli-cmake 
-     |   |___ ArduinoToolchain.cmake          <———— provided by arduino-cmake 
-     |   |___ Platform/                       <———— provided by arduino-cmake
-     |
-     |__ src/
-         |___ Arlifile                        <———— provided by the arli-cmake
-         |___ CMakeLists.txt                  <———— provided by the arli-cmake
-         |___ WeatherPod.cpp
-         |___ SetTime.h
-
-```
-
 ## Installation
 
 Run the following commands to perform setup and an automatic build:
@@ -65,6 +39,30 @@ You can also connect to a serial device like so:
 
 ```
 make WeatherPod-serial
+```
+
+### Directory Structure 
+
+The directory structure should look as follows:
+
+```
+  WeatherPod
+     |
+     |__ bin/
+     |   |___ setup                           <———— provided by the arli-cmake
+     |   |___ build                           <———— provided by the arli-cmake
+     |
+     |__ cmake/
+     |   |___ Arli.cmake                      <———— provided by the arli-cmake 
+     |   |___ ArduinoToolchain.cmake          <———— provided by arduino-cmake 
+     |   |___ Platform/                       <———— provided by arduino-cmake
+     |
+     |__ src/
+         |___ Arlifile                        <———— provided by the arli-cmake
+         |___ CMakeLists.txt                  <———— provided by the arli-cmake
+         |___ WeatherPod.cpp
+         |___ SetTime.h
+
 ```
 
 ## How Was This Project Created?
