@@ -41,4 +41,4 @@ before_install:
     fi
 script:
   - bin/setup
-  - bin/build example 
+  - bin/build src
