@@ -6,24 +6,25 @@
 
 ![screen](doc/weather-pod.jpg)
 
-## Usage
+## Setup and Build
 
-Let's cd into the project folder:
+### Prerequisites 
+
+ * CMake
+ * Arduino SDK
+ * Ruby 2.3+ (although setup script installs it if not found)
+
+### Automated Setup
+
+Checkout the repo into `weather-pod` folder:
 
 ```bash
-cd WeatherPod
-```
-## Installation
-
-Run the following commands to perform setup and an automatic build:
-
-```bash
-$ cd WeatherPod
-$ bin/setup
-$ bin/build src
+cd weather-pod
+bin/setup
+bin/build src
 ```
 
-### Building Manually
+### Manual Build
 
 The process to build and upload manually is super simple too:
 
