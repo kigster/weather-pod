@@ -20,8 +20,7 @@ Checkout the repo into `weather-pod` folder:
 
 ```bash
 cd weather-pod
-bin/setup
-bin/build src
+bin/build
 ```
 
 ### Manual Build
@@ -40,30 +39,6 @@ You can also connect to a serial device like so:
 
 ```
 make WeatherPod-serial
-```
-
-### Directory Structure 
-
-The directory structure should look as follows:
-
-```
-  WeatherPod
-     |
-     |__ bin/
-     |   |___ setup                           <———— provided by the arli-cmake
-     |   |___ build                           <———— provided by the arli-cmake
-     |
-     |__ cmake/
-     |   |___ Arli.cmake                      <———— provided by the arli-cmake 
-     |   |___ ArduinoToolchain.cmake          <———— provided by arduino-cmake 
-     |   |___ Platform/                       <———— provided by arduino-cmake
-     |
-     |__ src/
-         |___ Arlifile                        <———— provided by the arli-cmake
-         |___ CMakeLists.txt                  <———— provided by the arli-cmake
-         |___ WeatherPod.cpp
-         |___ SetTime.h
-
 ```
 
 ## How Was This Project Created?
