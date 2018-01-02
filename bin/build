@@ -1,39 +1,20 @@
 #!/usr/bin/env bash
+
+[[ -d bin/lib ]] || {
+  printf "Please run this script from the project's root\n"
+  exit 1
+}
+
 set +e
 source bin/lib/loader
 set -e
 
+export def_ruby_ver="2.4.2"
+export dep_dir="./cmake/.arduino-cmake"
+export dep_url="https://github.com/arduino-cmake/arduino-cmake"
 export root=$(pwd)
-export sources=${1}
 
-[[ -z ${sources} || ! -d ${sources} ]] && {
-  echo "usage: $0 <source-folder>"
-  echo "   eg: $0 src"
-  echo "   eg: $0 example"
-  exit 1
-}
+help $@
+setup
 
-function install::libs() {
-  cd ${sources}
-  [[ -f Arlifile ]] && arli bundle
-  cd ${root}
-}
-
-function build::cmake(){
-  cd $sources
-  rm -rf build
-  mkdir -p build
-  cd build
-  cmake ..
-  make
-  cd ${root}
-}
-
-function build() {
-  install::libs
-  build::cmake
-}
-
-build ${sources}
-
-set +e
+[[ $1 == "setup" ]] || build $@

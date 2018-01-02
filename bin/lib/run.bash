@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 ##———————————————————————————————————————————————————————————————————————————————
 ## © 2016-2017 Author: Konstantin Gredeskoul
 ## Ported from the licensed under the MIT license Project Pullulant, at
@@ -47,19 +46,30 @@ function lib::run() {
 function lib::run::exec() {
   local cmd=$*
 
-  printf "❯❯ ${bldylw}%-50.50s ${bldblu} ⇨ " "${cmd}" | tee -a ${run_stdout}
-
   # print the actual STDOUT if present, or nothing when captured
   printf "${txtblu}"
 
   set +e
-  eval "${cmd} 2>${run_stderr} 1>${run_stdout}"
+  if [[ ${opts_verbose} ]]; then
+    hr
+    printf "❯❯ ${bldylw}%-50.50s  \n" "${cmd}"
+    printf "${txtgrn}"
+    eval "${cmd} 2>${run_stderr} | tee -a ${run_stdout}"
+  else
+    printf "❯❯ ${bldylw}%-50.50s ${bldblu} ⇨ " "${cmd}"
+    eval "${cmd} 2>${run_stderr} 1>${run_stdout}"
+  fi
 
   real_status=$?
   command_exit_code=${real_status}
 
   if [[ ${command_exit_code} == 0 ]];  then
-    ok:
+    if [[ ${opts_verbose} ]]; then
+      printf "${bldblu}❯❯ ${bldylw}%s" "${cmd}"
+      ok:
+    else
+      ok:
+    fi
     commands_completed=$(($commands_completed + 1))
   else
     not_ok:
@@ -69,10 +79,6 @@ function lib::run::exec() {
     else
       commands_failed=$(($commands_failed + 1))
     fi
-  fi
-
-  if [[ -n ${opts_verbose} ]]; then
-    stdout ${run_stdout}
   fi
 
   if [[ ${command_exit_code} != 0 ]];  then

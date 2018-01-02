@@ -8,6 +8,7 @@ device:
   libraries:
     hardware: 
       - name: Wire
+    arduino: []
 dependencies:
   - name: Time
   - name: "DHT sensor library"

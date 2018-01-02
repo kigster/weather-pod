@@ -9,26 +9,17 @@
 # https://github.com/arduino-cmake/arduino-cmake                              #
 #                                                                             #
 #=============================================================================#
-include(Arli)
-arli_ensure_arlifile_cmake( ${CMAKE_CURRENT_SOURCE_DIR})
-include(Arlifile.cmake)
 
-set(FIRMWARE_NAME ${PROJECT_NAME})
+set(CMAKE_TOOLCHAIN_FILE cmake/ArduinoToolchain.cmake)
+cmake_minimum_required(VERSION 2.8)
 
-set(PROJECT_SOURCES
-  WeatherPod.cpp
-  SetTime.h
-  )
+project(WeatherPod C CXX ASM)
 
-message(STATUS "board device is [${BOARD_DEVICE}]")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+set(CMAKE_LOCAL_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake/)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-generate_arduino_firmware(
-  ${FIRMWARE_NAME}
-  PORT ${BOARD_DEVICE}
-  SRCS ${PROJECT_SOURCES}
-  LIBS ${ARLI_CUSTOM_LIBS} ${ARLI_ARDUINO_HARDWARE_LIBS} ${ARLI_ARDUINO_LIBS}
-  BOARD ${BOARD_NAME}
-  BOARD_CPU ${BOARD_CPU}
-  SERIAL screen @SERIAL_PORT@ 9600 -L
-)
+add_subdirectory(src)
 
+# Build an example by uncommenting this line, and commenting out previous line
+# add_subdirectory(example)

@@ -71,7 +71,7 @@ info() {
 }
 
 puts() {
-  printf "\n ⇨  ${txtblu}INFO:${clr} $*${clr}"
+  printf "\n ⇨  ${txtblu}$*${clr}"
 }
 
 err() {
