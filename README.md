@@ -28,7 +28,6 @@ bin/build
 The process to build and upload manually is super simple too:
 
 ```bash
-cd src
 rm -rf build && mkdir build && cd build
 cmake ..
 make 
